@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    var nu = new Date(Date.now());
+    var dag = 86400000;
+    var datum = nu.getDate();
+    var maand = nu.getMonth() + 1;
+    var jaar = nu.getFullYear();
+    var betaaldatum = (nu);
+    var factuurdatum = (datum + '-' + maand+ '-' + jaar) ;
+
+    var klantnaam = prompt("voer je eigen naam in");
+    var aantal =
+        parseInt(prompt("aantal boeken te bestellen?"));
+    var titel = "javascript";
+    var prijs= 29.90;
+    var bedrag= prijs * aantal;
+    var btw= bedrag * 0.06;
+    var totaal= bedrag + btw + bezorgkosten;
+
+    var bezorgkosten = 15;
+    var woonplaats = prompt("voer je woonplaats in");
+    var checkwoonpl = woonplaats.toLowerCase();
+    var postcode = prompt("voer je postcode in")
+    if(postcode>= '1000AA' && 'postcode<=2000BB'){
+        alert("u betaald geen bezorgkosten")
+        bezorgkosten = 0;
+    };
+    document.write("<br>aantal te bestellen: " + aantal);
+    document.write("<br>Prijs per boek is: " + prijs.toFixed(2));
+    document.write("<br>totaal prijs: "+ bedrag.toFixed(2));
+    document.write("<br>btw: " + btw.toFixed(2));
+    document.write("<br>totaal prijs inc. btw: " + totaal.toFixed(2));
+    document.write('<br> Woonplaats '+ woonplaats);
+    document.write('<br> postcode ' + postcode);
+    document.write('<br> factuurdatum: '+ factuurdatum )
+    document.write('<br> betaaldatum' + betaaldatum.toDateString())
+</script>
+</body>
+</html>

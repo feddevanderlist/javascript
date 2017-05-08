@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array methodes</title>
+</head>
+<body>
+<script>
+    var studenten = ['zakaria','albert','hamsa','mike','pieter'];
+    document.write('<br>Opgave 24: Studenten ' + studenten);
+
+    team = studenten;
+    document.write('<br> Opgave 25: Team: '+ team);
+
+    team[0] = 'Umut';
+    document.write('<br>Opgave 26: Element [0] is gewijzigd: ' + studenten);
+
+    studenten.shift();
+    document.write('<br>Opgave 27: Resultaat van shift: '+ studenten);
+
+    studenten.unshift('jozef', 'Umut');
+    document.write('<br> Opgave 28:Resultaat van unshift: ' + studenten);
+
+    studenten.pop();
+    document.write('<br> Opgave 29: Resultaat van pop: ' + studenten);
+
+    studenten.push('pieter','david');
+    document.write('<br> Opgave 30 : Resultaat van push: ' + studenten);
+
+    klas = studenten.splice(2,4);
+    document.write('<br> Opgave 31: Resultaat <br> studenten: ' +studenten+'<br>klas: ' +klas);
+
+    studenten.sort();
+    document.write(' <br> Opgave 32: Resultaat van sort: ' + studenten);
+
+    studenten.reverse();
+    document.write('<br> Opgave 33: Resultaat van reverse: ' + klas);
+
+    index = studenten.indexOf('jozef');
+    document.write('<br> Opgave 34 resultaat van indesOf ' + index);
+
+    delete klas[2];
+    document.write('<br>Opgave 35: Resultaat van delete: ' + klas);
+
+    document.write('<br> opgave 36: datatype van gedelete element is: ' +typeof klas[2]);
+
+    klas.splice(2,1);
+    document.write('<br> Opgave 37: element volledig verwijderd: ' + klas);
+
+    index=studenten.indexOf('jozef');
+    studenten.splice(index,1);
+    document.write('<br> opgave 38: specifieke student verwijderd: '+studenten);
+
+    klas2= klas.slice();
+    document.write('<br>opgave 39 resultaat van kopieren: '+ klas2);
+
+    var myString = klas.join('|');
+    document.write('<br> opgave 40: resultaat van join '+ myString);
+
+    var myArray = myString.split('|');
+    document.write('<br> opgave 41: rsultaat van split ' + myArray);
+</script>
+
+</body>
+</html>

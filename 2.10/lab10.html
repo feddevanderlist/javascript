@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lab10</title>
+</head>
+<body>
+<form name='form'>
+    <input type="text" name="bedrag" placeholder="bedrag" />
+   <select>
+       <option value="dol_eur">dollar/euro</option>
+       <option value="eur_dol">euro/dollar</option>
+       <option value="rub_eur">rubble/euro</option>
+       <option value="eur_rub">euro/rubble</option>
+   </select>
+    <input type="button" value="converteren"
+           onclick="document.write(exchange(document.form.bedrag.value,document.form.value))"/>
+</form>
+</body>
+</html>

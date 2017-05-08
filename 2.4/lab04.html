@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var palets = new Array('blue','red','green','white','black');
+    document.write(palets);
+    var nieuwekleur = prompt('voer een nieuwe kleur in:');
+    palets.push(nieuwekleur);
+    document.write( '<br>', palets);
+    var nieuwekleur = prompt('voer een nieuwe kleur in:');
+    palets.unshift(nieuwekleur);
+    document.write( '<br>', palets);
+    palets.sort();
+    document.write( '<br>', palets);
+    palets2=palets.splice(0,4);
+    document.write( '<br>', palets);
+    document.write( '<br>', palets2);
+    palets3=palets.slice();
+    document.write( '<br>', palets3);
+
+
+
+</script>
+</body>
+</html>

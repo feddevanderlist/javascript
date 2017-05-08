@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var vandaag = new Date(Date.now());
+    var dag = 86400000;
+    document.write(vandaag)
+    var factuur = prompt("datum invullen jjjj-mm-dd")
+    var factuurdatum=new Date(factuur)
+    document.write('<br> factuur ' + factuurdatum)
+    termijn = dag *30;
+    var betaaltijd = (factuurdatum.getTime()+ termijn);
+    var betaaldatum = new Date(betaaltijd);
+    document.write('<br> betaaldatum ' + betaaldatum.toDateString())
+    var resterende =(factuur.getTime() - betaaltijd ) / dag;
+    if(vandaag.getTime()> betaaldatum.getTime()){
+        alert("meld incasso bureau")
+    }
+    else{
+        alert("u hebt nog "+ resterende + "om te betalen")
+    };
+</script>
+</body>
+</html>
